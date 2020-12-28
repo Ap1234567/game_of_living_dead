@@ -16,9 +16,14 @@ def parse_rule(rule):
 
 
 def generate_table():
-    table = [[0] * 50] * 50
+    table = []
+    for i in range(50):
+        row = []
+        for j in range(50):
+            row.append(0)
+        table.append(row)
 
-    amount_of_cells_to_live = random.randint(1, 50)
+    amount_of_cells_to_live = random.randint(1, 2500)
     for i in range(amount_of_cells_to_live):
         row = random.randint(0, 49)
         cell = random.randint(0, 49)
