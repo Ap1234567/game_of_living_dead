@@ -10,7 +10,7 @@ def game_of_life(rule="B3/S23"):
     while True:
         print_table(table)
         table = get_next_gen_table(table, born_options, survived_options)
-        time.sleep(5)
+        time.sleep(2)
 
 
 def parse_rule(rule):
