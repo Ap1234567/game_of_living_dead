@@ -1,5 +1,6 @@
 import random
 import time
+from termcolor import colored
 
 
 # rule format: B3/S23 . B stand for born. S stand for survived.
@@ -39,7 +40,12 @@ def generate_table():
 
 def print_table(table):
     for row in table:
-        print(row)
+        for cell in row:
+            if cell == 1:
+                print(f"{colored(cell, 'green')} | ", end='')
+            else:
+                print(f"{colored(cell, 'red')} | ", end='')
+        print()
 
 
 def get_next_gen_table(old_table, born_options, survived_options):
