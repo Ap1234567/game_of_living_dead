@@ -1,4 +1,3 @@
-import pytest
 from app.game import generate_table, CONST_TABLE_SIZE
 
 

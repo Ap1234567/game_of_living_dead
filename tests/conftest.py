@@ -34,7 +34,7 @@ from app.game import CONST_TABLE_SIZE
 #   die - table[0][3]
 
 @pytest.fixture
-def example_table_all_dead():
+def mock_table_for_tests():
     table = []
     for i in range(CONST_TABLE_SIZE):
         row = []
@@ -58,3 +58,7 @@ def example_table_all_dead():
         table[cell["row"]][cell["col"]] = 1
 
     return table
+
+@pytest.fixture
+def mock_parsed_rule():
+    return [3], [2, 3]
